@@ -20,12 +20,35 @@ window.onload = function(){
 			// 		console.log('请求失败处理');
 			// 	});
 			// }
-			$.ajax({
+			// $.ajax({
+			//
+			// });
 
-			});
+
+
+
 	});
-	setInterval(vm.send, 1000);  // 定时器每秒调用send
+	// setInterval(vm.send, 1000);  // 定时器每秒调用send
 
+
+	var vm = new Vue({
+		el:"#app",
+		methods:{
+			send:function(){
+				axios({
+					method:'get',
+					url:'/sensorDate/historydate'
+				})
+					.then(function(res){
+						console.log(res);
+					})
+					.catch(function(error) {
+						console.log(error);
+					});
+			}
+		}
+	});
+	setInterval(vm.send, 1000);  // 定时器每秒调用send
 }
 
 //这里发送一个ajax 把数据拿下来就行了
