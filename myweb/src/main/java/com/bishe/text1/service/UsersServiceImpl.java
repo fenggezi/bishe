@@ -25,4 +25,9 @@ public class UsersServiceImpl implements UsersService {
     public Users login(String username, String password) {
         return usersDao.login(username, password);
     }
+
+    @Override
+    public Users register(String username, String password) {
+        return usersDao.register(username, password);
+    }
 }

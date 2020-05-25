@@ -436,7 +436,7 @@
 <div class="materialContainer">
 	<div class="box">
 		<div class="title">登录</div>
-		<form class="form-signin" action="dashboard.html" th:action="@{/login}" method="post">
+		<form class="form-signin" action="dashboard.html" th:action="@{/user/login}" method="post">
 		<div class="input">
 			<label class="sr-only" th:text="#{login.username}">Username</label>
 			<input type="text" class="form-control" name="username" th:placeholder="#{login.username}" placeholder="Username" required="" autofocus="">
@@ -453,8 +453,12 @@
 			</button>
 		</div>
 		</form>
-		
-		<a href="javascript:" class="pass-forgot">忘记密码？</a>
+
+<!--		<a href="javascript:" class="pass-forgot">忘记密码？</a>-->
+		<p style="color: #ff0000" th:text="${msg}" th:if="${not #strings.isEmpty(msg)}"></p>
+
+		<a class="btn btn-sm pass-forgot" th:href="@{/index.html(l='zh_CN')}">中文</a>
+		<a class="btn btn-sm pass-forgot" th:href="@{/index.html(l='en_US')}">English</a>
 	</div>
 
 	<div class="overbox">
@@ -462,16 +466,16 @@
 			<span class="shape"></span>
 		</div>
 		<div class="title">注册</div>
-		<div class="input">
-				<form action="#">
+		<form action="login.html"  th:action="@{/user/register}" method="post">
 
+		<div class="input">
 			<label for="regname">用户名</label>
-			<input type="text" name="regname" id="regname">
+			<input type="text" th:placeholder="#{register.regname}" placeholder="Regname" name="regname" id="regname">
 			<span class="spin"></span>
 		</div>
 		<div class="input">
 			<label for="regpass">密码</label>
-			<input type="password" name="regpass" id="regpass">
+			<input type="password"  th:placeholder="#{register.regpass}" placeholder="Regpass" name="regpass" id="regpass">
 			<span class="spin"></span>
 		</div>
 		<div class="input">
