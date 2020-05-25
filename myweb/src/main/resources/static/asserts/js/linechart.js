@@ -1,31 +1,28 @@
-var series1 =[30,10,70,15,60,20,70,80];
-var series2 =[10,40,20,35,25];
-var series3 = [1200,1200,1212,1232,1243];
-var series4 = [1343,1243,1500,1423,1243];
+var series1 =[];
+var series2 =[];
+var series3 = [];
+var series4 = [];
 var xTime = ['20201212', '20201213', '20201214', '20201215', '20201216', '20201217', '20201218'];
 
 window.onload = function(){
 	var vm = new Vue({
-		el:'#box',
-		data:{
-			msg:'Hello World!',
-		},
-		methods:{
-			get:function(){
-				//发送get请求
-				this.$http.get('/sensorDate/historydate').then(function(res){
-					for (var i = 0 ;i<res.length;i++){
-						series1[series1.length] = res[i].temperature; // wen
-						series2[series2.length] = res[i].humidity; //shi
-						series3[series3.length] = res[i].Light; // guang
-						series4[series4.length] = res[i].carbon; // er
-					}
-					// document.write(res.body);
-				},function(){
-					console.log('请求失败处理');
-				});
-			}
-		}
+			// get:function(){
+			// 	//发送get请求
+			// 	this.$http.get('/sensorDate/historydate').then(function(res){
+			// 		for (var i = 0 ;i<res.length;i++){
+			// 			series1[series1.length] = res[i].temperature; // wen
+			// 			series2[series2.length] = res[i].humidity; //shi
+			// 			series3[series3.length] = res[i].Light; // guang
+			// 			series4[series4.length] = res[i].carbon; // er
+			// 		}
+			// 		// document.write(res.body);
+			// 	},function(){
+			// 		console.log('请求失败处理');
+			// 	});
+			// }
+			$.ajax({
+
+			});
 	});
 	setInterval(vm.send, 1000);  // 定时器每秒调用send
 
