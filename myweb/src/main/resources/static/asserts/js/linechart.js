@@ -60,7 +60,7 @@ window.onload = function(){
 						series2[i] = res.data.datas[i].humidity;
 						series3[i] = res.data.datas[i].light;
 						series4[i] = res.data.datas[i].carbon;
-						xTime [i] = res.data.datas[i].senortime;
+						xTime [i] = res.data.datas[i].timesx;
 					}
 
 					// res.forEach((item)=>{
