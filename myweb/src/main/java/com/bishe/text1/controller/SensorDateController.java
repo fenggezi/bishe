@@ -1,7 +1,7 @@
 package com.bishe.text1.controller;
 
+import com.bishe.text1.entities.ApiRet;
 import com.bishe.text1.entities.Sensor;
-import javafx.scene.input.DataFormat;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -27,8 +27,9 @@ public class SensorDateController {
 
     @GetMapping("/sensorDate/historydate")
     @ResponseBody
-    public List<Sensor> historyDate(Model model) {
+    public ApiRet<List<Sensor>> historyDate(Model model) {
         //查询历史数据
+        ApiRet result = new ApiRet<>();
         SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         List<Sensor> sensorslist = new ArrayList<>();
         Sensor sensor = new Sensor(1, 22.0, 35.0, 1200, 1256, new Date(), 1);
@@ -51,7 +52,9 @@ public class SensorDateController {
         sensorslist.add(sensor7);
         sensorslist.add(sensor8);
         sensorslist.add(sensor9);
-        return sensorslist;
+        result.setDatas(sensorslist);
+        result.setStatus(2323232);
+        return result;
     }
 
     @GetMapping("/test/history")
