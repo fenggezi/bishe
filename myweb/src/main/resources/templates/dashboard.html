@@ -75,12 +75,31 @@
 <!--						</div>-->
 <!--					</div>-->
 
-					<canvas class="my-4 chartjs-render-monitor" id="myChart" width="1076" height="454" style="display: block; width: 1076px; height: 454px;"></canvas>
+				<div class="row">
+					<div class="col-xs-6 col-md-3">
+						<p> 终端节点 1</p>
+						<P> 状态 ：正常</P>
+						<a href="#" class="thumbnail">
+							<img src="..." alt="...">
+							<img class="mb-4" th:src="@{/asserts/img/zhongduan.PNG}" src="asserts/img/zhongduan.PNG" alt="" width="72" height="72">
 
+						</a>
+					</div>
+				</div>
 
 			</div>
 		</div>
+		<div class="row">
+			<div class="col-xs-6 col-md-3">
+				<p> 终端节点 1</p>
+				<P> 状态 ：正常</P>
+				<a href="#" class="thumbnail">
+					<img src="..." alt="...">
+					<img class="mb-4" th:src="@{/asserts/img/zhongduan.png}" src="asserts/img/zhongduan.png" alt="" width="72" height="72">
 
+				</a>
+			</div>
+		</div>
 		<!-- Bootstrap core JavaScript
     ================================================== -->
 		<!-- Placed at the end of the document so the pages load faster -->
@@ -94,35 +113,6 @@
 		</script>
 		<!-- Graphs -->
 		<script type="text/javascript" src="asserts/js/Chart.min.js" ></script>
-		<script>
-			var ctx = document.getElementById("myChart");
-			var myChart = new Chart(ctx, {
-				type: 'line',
-				data: {
-					labels: ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-					datasets: [{
-						data: [15339, 21345, 18483, 24003, 23489, 24092, 12034],
-						lineTension: 0,
-						backgroundColor: 'transparent',
-						borderColor: '#007bff',
-						borderWidth: 4,
-						pointBackgroundColor: '#007bff'
-					}]
-				},
-				options: {
-					scales: {
-						yAxes: [{
-							ticks: {
-								beginAtZero: false
-							}
-						}]
-					},
-					legend: {
-						display: false,
-					}
-				}
-			});
-		</script>
 
 	</body>
 
