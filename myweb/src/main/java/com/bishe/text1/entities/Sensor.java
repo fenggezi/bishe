@@ -2,11 +2,13 @@ package com.bishe.text1.entities;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.util.Date;
 
 @Data
 @AllArgsConstructor
+@NoArgsConstructor
 public class Sensor {
     // 数据类型实体类
     private int id ;

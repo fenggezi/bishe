@@ -3,7 +3,7 @@ window.onload = function() {
         el:"#datasreal",
         data:{
             temperature:'25',
-            humidity:'',
+            humidity:'35',
             light:'1200',
             carbon:'1300',
             timesx:'',
@@ -18,11 +18,8 @@ window.onload = function() {
                     console.log(res)
                     console.log(res.data)
                     console.log(".....####......fenge ")
-
-
                     console.log(res.data.timesx)
                     console.log("......####.....fenge ")
-
                     vm.temperature= res.data.temperature;
                     this.humidity = res.data.humidity;
                     vm.light = res.data.light;

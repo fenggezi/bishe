@@ -92,7 +92,7 @@ window.onload = function(){
 			}
 		}
 	});
-	setInterval(vm.send, 1000);  // 定时器每秒调用send
+	setInterval(vm.send, 3000);  // 定时器每秒调用send
 }
 
 //这里发送一个ajax 把数据拿下来就行了

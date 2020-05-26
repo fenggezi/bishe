@@ -34,7 +34,7 @@ public class SensorDateController {
         List<Sensor> sensorslist = new ArrayList<>();
 //        Sensor sensor = sensorService.realTimeDate(); // 每秒ajax 查询的数据值
         SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-        Sensor realSensor = new Sensor(1, 22.0, 35.0, 1200, 1256,  1,df.format(new Date()));
+        Sensor realSensor = new Sensor(1, 22.0, 35.0, 1200, 1256,  1,df.format(new Date()).toString());
         sensorslist.add(realSensor);
         result.setDatas(sensorslist);
         return realSensor;

@@ -5,6 +5,8 @@ import com.bishe.text1.entities.Sensor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 
 @Service
@@ -15,7 +17,15 @@ public class SensorServiceImpl implements SensorService {
 
     @Override
     public Sensor realTimeDate() {// 查询实时数据
-        return sensorDao.selectReal();
+        Sensor sensorN = new Sensor();
+        SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        Sensor dao = sensorDao.selectReal();
+        sensorN.setCarbon(dao.getCarbon());
+        sensorN.setHumidity(dao.getHumidity());
+        sensorN.setLight(dao.getLight());
+        sensorN.setTimesx(df.format(new Date()));
+        sensorN.setId(dao.getId());
+        return sensorN;
     }
 
     @Override
