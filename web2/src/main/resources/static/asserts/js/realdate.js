@@ -1,6 +1,6 @@
 window.onload = function() {
     var vm = new Vue({
-        el:"#datasreal",
+        el:"#dates",
         data:{
             temperature:'25',
             humidity:'35',

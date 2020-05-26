@@ -6,6 +6,7 @@ import com.sun.org.apache.xpath.internal.operations.Mod;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -40,7 +41,7 @@ public class UserController {
             return "login";
         }
         session.setAttribute("loginUser", username);
-        return  "redirect:/main.html";
+        return  "redirect:/date/my.html";
     }
 
     @PostMapping("/user/login")
@@ -50,7 +51,7 @@ public class UserController {
                         HttpSession session) {
 
         session.setAttribute("loginUser", "allens");
-        return  "redirect:/main.html";
+        return  "redirect:/my.html";
     }
 
 
@@ -59,8 +60,8 @@ public class UserController {
                          @RequestParam("regpass") String regpass,
                          Map<String,Object> map){
 
-        int register = usersService.register(regname, regpass);
-//        int register = 2;
+//        int register = usersService.register(regname, regpass);
+        int register = 2;
         if(register>0){
             map.put("msg","注册成功");
             return "login";
@@ -71,10 +72,9 @@ public class UserController {
         return  "redirect:/login.html";
     }
 
-    //查询 管理员
+    @GetMapping("/register")
     public String selectuserALl(Model model){
-
-        return  "";
+        return  "register";
     }
 
 }

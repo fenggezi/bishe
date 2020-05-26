@@ -24,7 +24,7 @@ public class SensorDateController {
 
     @GetMapping("/sensor/real")
     public String realJunmp(){
-        return "date/realdate";
+        return "pricing";
     }
 
     @GetMapping("/sensorDate/realtime")
@@ -77,7 +77,12 @@ public class SensorDateController {
     @GetMapping("/test/history")
     public String sdsds(Model model){
         //跳转历史数据页面
-        return "date/history3";
+        return "my";
+    }
+
+    @GetMapping("/jidianqi")
+    public String jidianqi(){
+        return "carousels";
     }
 
 }
