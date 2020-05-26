@@ -2,11 +2,15 @@ package com.bishe.text1.controller;
 
 import com.bishe.text1.entities.Users;
 import com.bishe.text1.service.UsersService;
+import com.sun.org.apache.xpath.internal.operations.Mod;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+
+import javax.management.modelmbean.ModelMBeanOperationInfo;
 import javax.servlet.http.HttpSession;
 import java.util.Map;
 
@@ -68,5 +72,10 @@ public class UserController {
         return  "redirect:/login.html";
     }
 
+    //查询 管理员
+    public String selectuserALl(Model model){
+
+        return  "";
+    }
 
 }

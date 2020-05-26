@@ -33,6 +33,14 @@ public class EmployeeController {
             Employee employee = new Employee(1, "allen"+i, "allen"+i, 1, 1, new Department());
             employees.add(employee);
         }
+        Employee allen = new Employee(1, "allen", "123456789@qq.com", 1, 1, new Department());
+        Employee allen2 = new Employee(1, "allen", "123456789@qq.com", 1, 1, new Department());
+        Employee allen3 = new Employee(1, "allen", "123456789@qq.com", 1, 1, new Department());
+        Employee allen4 = new Employee(1, "allen", "123456789@qq.com", 1, 1, new Department());
+        employees.add(allen);
+        employees.add(allen2);
+        employees.add(allen3);
+        employees.add(allen4);
         model.addAttribute("employee", employees);
         return "emp/list";
     }

@@ -2,114 +2,150 @@
 <!-- saved from url=(0052)http://getbootstrap.com/docs/4.0/examples/dashboard/ -->
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 
-	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-		<meta name="description" content="">
-		<meta name="author" content="">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="">
+	<meta name="author" content="">
 
-		<title>Dashboard Template for Bootstrap</title>
-		<!-- Bootstrap core CSS -->
-		<link href="../../static/asserts/css/bootstrap.min.css" th:href="@{webjars/bootstrap/4.4.1-1/css/bootstrap.css}" rel="stylesheet">
+	<title>Dashboard Template for Bootstrap</title>
+	<!-- Bootstrap core CSS -->
+	<link href="../../static/asserts/css/bootstrap.min.css" th:href="@{/webjars/bootstrap/4.4.1-1/css/bootstrap.css}" rel="stylesheet">
 
-		<!-- Custom styles for this template -->
-		<link href="../../static/asserts/css/dashboard.css" th:href="@{/asserts/css/dashboard.css}" rel="stylesheet">
-		<style type="text/css">
-			/* Chart.js */
-			
-			@-webkit-keyframes chartjs-render-animation {
-				from {
-					opacity: 0.99
-				}
-				to {
-					opacity: 1
-				}
+	<!-- Custom styles for this template -->
+	<link href="../../static/asserts/css/dashboard.css" th:href="@{/asserts/css/dashboard.css}" rel="stylesheet">
+	<style type="text/css">
+		/* Chart.js */
+
+		@-webkit-keyframes chartjs-render-animation {
+			from {
+				opacity: 0.99
 			}
-			
-			@keyframes chartjs-render-animation {
-				from {
-					opacity: 0.99
-				}
-				to {
-					opacity: 1
-				}
+			to {
+				opacity: 1
 			}
-			
-			.chartjs-render-monitor {
-				-webkit-animation: chartjs-render-animation 0.001s;
-				animation: chartjs-render-animation 0.001s;
+		}
+
+		@keyframes chartjs-render-animation {
+			from {
+				opacity: 0.99
 			}
-		</style>
-	</head>
+			to {
+				opacity: 1
+			}
+		}
 
-	<body>
+		.chartjs-render-monitor {
+			-webkit-animation: chartjs-render-animation 0.001s;
+			animation: chartjs-render-animation 0.001s;
+		}
+	</style>
+</head>
 
-	<!--		引入topbar-->
-		<div th:replace="commons/bar::#topbar"></div>
+<body class="sidebar-menu-collapsed" id="apps" >
 
 
-		<div class="container-fluid">
-			<div class="row">
+<!--		引入topbar-->
+<div th:replace="commons/bar::#topbar"></div>
 
+iv class="container-fluid">
+<div class="row">
 	<!--		引入sidebar-->
-		<div th:replace="commons/bar::#sidebar(activeUri='emps')"></div>
+	<div th:replace="commons/bar::#sidebar(activeUri='emps')"></div>
+	<main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
+			<h3><div class="label label-default" align="center" >实时数据展示</div></h3>
+		<br>
+					<div class="row"  id="datasreal">
+						<div class="col-sm-6 col-md-3">
+							<div class="thumbnail">
+								<img class="mb-4" th:src="@{/asserts/img/bootstrap-solid.svg}" src="asserts/img/bootstrap-solid.svg" alt="" width="72" height="72">
+								<div class="caption">
+									<h3>温度 {{temperature}} ℃</h3>
+									<div ></div>
+<!--									<div th:text="${realSensor.temperature}"></div>-->
+<!--									<p th:text="${nodes.temperature}"></p>-->
+									<p><a href="#" class="btn btn-primary" role="button">升温</a> <a href="#" class="btn btn-default" role="button">降温</a></p>
+								</div>
+							</div>
+						</div>
+						<!-- 分隔 -->
+						<div class="col-sm-6 col-md-3">
+							<div class="thumbnail">
+								<img class="mb-4" th:src="@{/asserts/img/bootstrap-solid.svg}" src="asserts/img/bootstrap-solid.svg" alt="" width="72" height="72">
+								<div class="caption">
+									<h3>湿度 {{humidity}} %</h3>
+<!--									<div th:text="${realSensor.humidity}"></div>-->
+<!--									<p th:text="${nodes.temperature}"></p>-->
+									<p><a href="#" class="btn btn-primary" role="button">加湿</a> <a href="#" class="btn btn-default" role="button">通风</a></p>
+								</div>
+							</div>
+						</div>
+						<!-- 分隔 -->
+						<div class="col-sm-6 col-md-3">
+							<div class="thumbnail">
+								<img class="mb-4" th:src="@{/asserts/img/bootstrap-solid.svg}" src="asserts/img/bootstrap-solid.svg" alt="" width="72" height="72">
+								<div class="caption">
+									<h3>光照强度  {{light}} cd</h3>
+<!--									<div th:text="${realSensor.light}"></div>-->
 
-
-				<main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
-					<h2><a class="btn btn-sm btn-primary" th:href="@{/emp}">添加</a></h2>
-					<div class="table-responsive">
-						<table class="table table-striped table-sm">
-							<thead>
-								<tr>
-									<th>编号</th>
-									<th>名字</th>
-									<th>邮箱</th>
-									<th>性别</th>
-									<th>部门</th>
-									<th>操作</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr th:each="emp:${employee}">
-									<td th:text="${emp.id}"></td>
-									<td th:text="${emp.lastName}"></td>
-									<td th:text="${emp.email}"></td>
-									<td th:text="${emp.gender}==0?'女':'男'"></td>
-									<td th:text="${emp.department.departmentName}"></td>
-									<td>
-										<a class="btn btn-sm btn-primary" th:href="@{/emp/}+${emp.id}" >编辑</a>
-
-<!--										<form th:action="@{/emp/}+${emp.id}" method="post">-->
-<!--											<input type="hidden" name="_method" value="delete">-->
-											<a th:href="@{/empDelete(id=${emp.id})}" class="btn btn-sm btn-danger">删除</a>
-
-<!--										</form>-->
-									</td>
-								</tr>
-							</tbody>
-						</table>
+<!--									<p th:text="${nodes.temperature}"></p>-->
+									<p><a href="#" class="btn btn-primary" role="button">开启遮光</a> <a href="#" class="btn btn-default" role="button">关闭遮光</a></p>
+								</div>
+							</div>
+						</div>
+						<!-- 分隔 -->
+						<div class="col-sm-6 col-md-3">
+							<div class="thumbnail">
+								<img class="mb-4" th:src="@{/asserts/img/bootstrap-solid.svg}" src="asserts/img/bootstrap-solid.svg" alt="" width="72" height="72">
+								<div class="caption">
+									<h3>二氧化碳浓度  {{carbon}} ppm</h3>
+<!--									<div th:text="${realSensor.carbon}"></div>-->
+<!--									<p th:text="${nodes.temperature}"></p>-->
+									<p><a href="#" class="btn btn-primary" role="button">开启通风</a> <a href="#" class="btn btn-default" role="button">关闭通风</a></p>
+								</div>
+							</div>
+						</div>
+						<!-- 分隔 -->
 					</div>
-				</main>
+
+		<!--分隔 -->
+		<div> 北京时间 {{timesx}}</div>
+		<!-- 底部-->
+
+	</main>
 			</div>
 		</div>
 
+
+
 		<!-- Bootstrap core JavaScript
     ================================================== -->
-		<!-- Placed at the end of the document so the pages load faster -->
-		<script type="text/javascript" src="../../static/asserts/js/jquery-3.2.1.slim.min.js"></script>
-		<script type="text/javascript" src="../../static/asserts/js/popper.min.js"></script>
-		<script type="text/javascript" src="../../static/asserts/js/bootstrap.min.js"></script>
+<!--		&lt;!&ndash; Placed at the end of the document so the pages load faster &ndash;&gt;-->
+<!--	<script type="text/javascript" src="../../static/asserts/js/jquery-3.2.1.slim.min.js"></script>-->
+<!--	<script type="text/javascript" src="../../static/asserts/js/popper.min.js"></script>-->
+<!--	<script type="text/javascript" src="../../static/asserts/js/bootstrap.min.js"></script>-->
 
-		<!-- Icons -->
-		<script type="text/javascript" src="../../static/asserts/js/feather.min.js"></script>
-		<script>
-			feather.replace()
-		</script>
+<!--	&lt;!&ndash; Icons &ndash;&gt;-->
+<!--	<script type="text/javascript" src="../../static/asserts/js/feather.min.js"></script>-->
+<!--	<script>-->
+<!--		feather.replace()-->
+<!--	</script>-->
 
-		<!-- Graphs -->
-		<script type="text/javascript" src="../../static/asserts/js/Chart.min.js"></script>
+<!--	&lt;!&ndash; Graphs &ndash;&gt;-->
+<!--	<script type="text/javascript" src="../../static/asserts/js/Chart.min.js"></script>-->
 
 
+	<script src="http://cdn.static.runoob.com/libs/angular.js/1.4.6/angular.min.js"></script>
+	<!-- chart js -->
+	<script src="/asserts/js/vue.js"></script>
+	<script src="/asserts/js/axios.js"></script>
+
+	<script src="/asserts/js/Chart.min.js"></script>
+	<script src="/asserts/js/utils.js"></script>
+	<!-- //chart js -->
+	<!-- Different scripts of charts.  Ex.Barchart, Linechart -->
+	<script src="/asserts/js/bar.js"></script>
+	<script src="/asserts/js/realdate.js"></script>
 
 	</body>
 

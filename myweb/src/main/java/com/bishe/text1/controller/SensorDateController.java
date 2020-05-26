@@ -2,6 +2,8 @@ package com.bishe.text1.controller;
 
 import com.bishe.text1.entities.ApiRet;
 import com.bishe.text1.entities.Sensor;
+import com.bishe.text1.service.SensorService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -17,12 +19,25 @@ public class SensorDateController {
 
     //两个方法 查询实时数据 和历史数据
 
+    @Autowired
+    private SensorService sensorService;
+
+    @GetMapping("/sensor/real")
+    public String realJunmp(){
+        return "date/realdate";
+    }
 
     @GetMapping("/sensorDate/realtime")
-    public String realTime(Model model){
-//查询实时数据
-
-        return "emp/list";
+    @ResponseBody
+    public  Sensor realTime(Model model){//
+        ApiRet result = new ApiRet<>();
+        List<Sensor> sensorslist = new ArrayList<>();
+//        Sensor sensor = sensorService.realTimeDate(); // 每秒ajax 查询的数据值
+        SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        Sensor realSensor = new Sensor(1, 22.0, 35.0, 1200, 1256,  1,df.format(new Date()));
+        sensorslist.add(realSensor);
+        result.setDatas(sensorslist);
+        return realSensor;
     }
 
     @GetMapping("/sensorDate/historydate")
@@ -52,6 +67,8 @@ public class SensorDateController {
         sensorslist.add(sensor7);
         sensorslist.add(sensor8);
         sensorslist.add(sensor9);
+        //数据库查询的值
+//        List<Sensor> sensors = sensorService.sensorHistoryDate();
         result.setDatas(sensorslist);
         result.setStatus(2323232);
         return result;
@@ -59,8 +76,7 @@ public class SensorDateController {
 
     @GetMapping("/test/history")
     public String sdsds(Model model){
-//查询实时数据
-
+        //跳转历史数据页面
         return "date/history3";
     }
 

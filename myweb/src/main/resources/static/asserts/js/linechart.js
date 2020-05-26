@@ -6,25 +6,25 @@ var series4 = [];
 var xTime = [];
 
 window.onload = function(){
-	var vm = new Vue({
-			// get:function(){
-			// 	//发送get请求
-			// 	this.$http.get('/sensorDate/historydate').then(function(res){
-			// 		for (var i = 0 ;i<res.length;i++){
-			// 			series1[series1.length] = res[i].temperature; // wen
-			// 			series2[series2.length] = res[i].humidity; //shi
-			// 			series3[series3.length] = res[i].Light; // guang
-			// 			series4[series4.length] = res[i].carbon; // er
-			// 		}
-			// 		// document.write(res.body);
-			// 	},function(){
-			// 		console.log('请求失败处理');
-			// 	});
-			// }
-			// $.ajax({
-			//
-			// });
-	});
+	// var vm = new Vue({
+	// 		// get:function(){
+	// 		// 	//发送get请求
+	// 		// 	this.$http.get('/sensorDate/historydate').then(function(res){
+	// 		// 		for (var i = 0 ;i<res.length;i++){
+	// 		// 			series1[series1.length] = res[i].temperature; // wen
+	// 		// 			series2[series2.length] = res[i].humidity; //shi
+	// 		// 			series3[series3.length] = res[i].Light; // guang
+	// 		// 			series4[series4.length] = res[i].carbon; // er
+	// 		// 		}
+	// 		// 		// document.write(res.body);
+	// 		// 	},function(){
+	// 		// 		console.log('请求失败处理');
+	// 		// 	});
+	// 		// }
+	// 		// $.ajax({
+	// 		//
+	// 		// });
+	// });
 	// setInterval(vm.send, 1000);  // 定时器每秒调用send
 
 
@@ -48,13 +48,13 @@ window.onload = function(){
 						// })
 
 					for (let i = 0; i <res.data.datas.length; i++) {
-						console.log(">>>>>>>>>>>>>>>")
-
-						console.log(res[i])
-						console.log(res.data[i])
-						console.log(res.data.datas[i].humidity);
-
-						console.log(">>>>>>>>>>>>>>>")
+						// console.log(">>>>>>>>>>>>>>>")
+						//
+						// console.log(res[i])
+						// console.log(res.data[i])
+						// console.log(res.data.datas[i].humidity);
+						//
+						// console.log(">>>>>>>>>>>>>>>")
 
 						series1[i] = res.data.datas[i].temperature;
 						series2[i] = res.data.datas[i].humidity;
@@ -66,25 +66,25 @@ window.onload = function(){
 					// res.forEach((item)=>{
 					// 	console.log(item)
 					// })
-
-						console.log(res);
-						console.log(res.status);
-						console.log(res.length);
-						console.log(".....")
-						console.log(res.data.datas);
-						console.log(res.data.datas[0]);
-						console.log(res.data.datas[0].humidity);
-						console.log(res.data.datas[0].id);
-						console.log("....jjjjjjjjjj.")
-
-						console.log(res.datas);
-						console.log(".....12212")
-
-						console.log(res[0]);
-						console.log(series1);
-						console.log(series2);
-						console.log(series3);
-						console.log(series4);
+					//
+					// 	console.log(res);
+					// 	console.log(res.status);
+					// 	console.log(res.length);
+					// 	console.log(".....")
+					// 	console.log(res.data.datas);
+					// 	console.log(res.data.datas[0]);
+					// 	console.log(res.data.datas[0].humidity);
+					// 	console.log(res.data.datas[0].id);
+					// 	console.log("....jjjjjjjjjj.")
+					//
+					// 	console.log(res.datas);
+					// 	console.log(".....12212")
+					//
+					// 	console.log(res[0]);
+					// 	console.log(series1);
+					// 	console.log(series2);
+					// 	console.log(series3);
+					// 	console.log(series4);
 					})
 					.catch(function(error) {
 						console.log(error);

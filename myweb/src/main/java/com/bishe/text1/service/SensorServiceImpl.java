@@ -14,7 +14,7 @@ public class SensorServiceImpl implements SensorService {
     SensorDao sensorDao;
 
     @Override
-    public List<Sensor> realTimeDate() {// 查询实时数据
+    public Sensor realTimeDate() {// 查询实时数据
         return sensorDao.selectReal();
     }
 

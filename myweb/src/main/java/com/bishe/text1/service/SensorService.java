@@ -6,7 +6,7 @@ import com.bishe.text1.entities.Sensor;
 import java.util.List;
 
 public interface SensorService {
-    public List<Sensor> realTimeDate();
+    public Sensor realTimeDate();
 
     public  List<Sensor>  sensorHistoryDate();
 
