@@ -24,8 +24,25 @@ public class SensorDateController {
 
     @GetMapping("/sensor/real")
     public String realJunmp(){
-        return "date/realdate";
+        return "/realdate";
     }
+    @GetMapping("/sensor/history")
+    public String history(){
+        return "/history";
+    }
+    @GetMapping("/sensor/shezhi")
+    public String shezhi(){
+        return "/update";
+    }
+    @GetMapping("/sensor/manager")
+    public String manager(){
+        return "/manager";
+    }
+
+
+
+
+
 
     @GetMapping("/sensorDate/realtime")
     @ResponseBody
@@ -40,7 +57,7 @@ public class SensorDateController {
         return realSensor;
     }
 
-    @GetMapping("/sensorDate/historydate")
+    @GetMapping("/sensorDate/history")
     @ResponseBody
     public ApiRet<List<Sensor>> historyDate(Model model) {
         //查询历史数据
@@ -57,6 +74,9 @@ public class SensorDateController {
         Sensor sensor7 = new Sensor(8, 15.0, 15.1, 1293, 1456, 1,df.format(new Date()));
         Sensor sensor8 = new Sensor(9, 35.0, 35.1, 1100, 1633, 1,df.format(new Date()));
         Sensor sensor9 = new Sensor(10, 22.7, 23.1, 980, 1455, 1,df.format(new Date()));
+        Sensor sensor10= new Sensor(8, 15.0, 15.1, 1293, 1456, 1,df.format(new Date()));
+        Sensor sensor11 = new Sensor(9, 35.0, 35.1, 1100, 1633, 1,df.format(new Date()));
+        Sensor sensor12 = new Sensor(10, 22.7, 23.1, 980, 1455, 1,df.format(new Date()));
         sensorslist.add(sensor);
         sensorslist.add(sensor1);
         sensorslist.add(sensor2);
@@ -67,6 +87,9 @@ public class SensorDateController {
         sensorslist.add(sensor7);
         sensorslist.add(sensor8);
         sensorslist.add(sensor9);
+        sensorslist.add(sensor10);
+        sensorslist.add(sensor11);
+        sensorslist.add(sensor12);
         //数据库查询的值
 //        List<Sensor> sensors = sensorService.sensorHistoryDate();
         result.setDatas(sensorslist);
