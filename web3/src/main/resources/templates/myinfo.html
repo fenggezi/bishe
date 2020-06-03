@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- Favicon icon --> th:href="@{/asserts/css/css2/bootstrap.min.css}"
+    <link rel="icon" type="image/png" sizes="16x16"  href="../assets/images/favicon.png" th:href="@{/asserts/images/favicon.png}">
+    <!-- Bootstrap Core CSS -->
+    <link th:href="@{/asserts/css/css2/bootstrap.min.css}" href="../assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link  th:href="@{/asserts/css/css/style.css}" href="css/style.css" rel="stylesheet">
+    <!-- page css -->
+    <link th:href="@{/asserts/css/css/signin.css}" href="css/pages/icon-page.css" rel="stylesheet">
+
+<!--    <link href="asserts/css/signin.css" th:href="@{/asserts/css/signin.css}" rel="stylesheet">-->
+
+    <!-- You can change the theme colors from here --> th:href="@{/asserts/css/css/signin.css}"
+    <link th:href="@{/asserts/css/css/default-dark.css}" href="css/colors/default-dark.css" id="theme" rel="stylesheet">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+</head>
+
+<body class="fix-header card-no-border fix-sidebar">
+    <!-- ============================================================== -->
+    <!-- Preloader - style you can find in spinners.css -->
+    <!-- ============================================================== -->
+    <div class="preloader">
+        <div class="loader">
+            <div class="loader__figure"></div>
+            <p class="loader__label">欢迎您 LZ</p>
+        </div>
+    </div>
+    <!-- ============================================================== -->
+    <!-- Main wrapper - style you can find in pages.scss -->
+    <!-- ============================================================== -->
+    <div id="main-wrapper">
+        <!-- ============================================================== -->
+        <!-- Topbar header - style you can find in pages.scss -->
+        <!-- ============================================================== -->
+        <header class="topbar">
+            <nav class="navbar top-navbar navbar-expand-md navbar-light">
+                <!-- ============================================================== -->
+                <!-- Logo -->
+                <!-- ============================================================== -->
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="index.html">
+                        <!-- Logo icon --><b>
+
+                            <img  th:href="@{/asserts/images/logo-icon.png}"  src="../assets/images/logo-icon.png" alt="homepage" class="dark-logo" />
+                        </b>
+                        <!--End Logo icon -->
+                        <!-- Logo text -->
+                        <span>
+							欢迎您  LZ
+                            <!-- <img src="../assets/images/logo-text.png" alt="homepage" class="dark-logo" /> -->
+                        </span>
+                    </a>
+                </div>
+                <!-- ============================================================== -->
+                <!-- End Logo -->
+                <!-- ============================================================== -->
+                <div class="navbar-collapse">
+                    <!-- ============================================================== -->
+                    <!-- toggle and nav items -->
+                    <!-- ============================================================== -->
+                    <ul class="navbar-nav mr-auto">
+                        <!-- This is  -->
+                        <li class="nav-item"> <a class="nav-link nav-toggler hidden-md-up waves-effect waves-dark" href="javascript:void(0)"><i class="ti-menu"></i></a> </li>
+                    </ul>
+                    <!-- ============================================================== -->
+                    <!-- User profile and search -->
+                    <!-- ============================================================== -->
+                    <ul class="navbar-nav my-lg-0">
+                        <!-- ============================================================== -->
+                        <!-- Search -->
+                        <!-- ============================================================== -->
+                        <li class="nav-item hidden-xs-down search-box"> <a class="nav-link hidden-sm-down waves-effect waves-dark" href="javascript:void(0)"><i class="ti-search"></i></a>
+                            <form class="app-search">
+                                <input type="text" class="form-control" placeholder="Search & enter"> <a class="srh-btn"><i class="ti-close"></i></a>
+                            </form>
+                        </li>
+                        <!-- ============================================================== -->
+                        <!-- Profile -->
+                        <!-- ============================================================== -->
+                        <li class="nav-item">
+							admin
+                            <a class="nav-link waves-effect waves-dark" href="#"><img th:href="@{/asserts/images/users/1.png}" src="../assets/images/users/1.jpg" alt="user" class="profile-pic" /></a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <!-- ============================================================== -->
+        <!-- End Topbar header -->
+		
+		
+		
+		
+		
+		
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- Left Sidebar - style you can find in sidebar.scss  -->
+        <!-- ============================================================== -->
+        <aside class="left-sidebar">
+            <!-- Sidebar scroll-->
+            <div class="scroll-sidebar">
+                <!-- Sidebar navigation-->
+                <nav class="sidebar-nav">
+                    <ul id="sidebarnav">
+                        <li> <a class="waves-effect waves-dark" href="index.html" aria-expanded="false"><i class="mdi mdi-gauge"></i><span class="hide-menu">首页</span></a></li>
+                        <li> <a class="waves-effect waves-dark" href="pages-profile.html" aria-expanded="false"><i class="mdi mdi-account-check"></i><span class="hide-menu">个人信息</span></a></li>
+                        <li> <a class="waves-effect waves-dark" href="table-basic.html" aria-expanded="false"><i class="mdi mdi-table"></i><span class="hide-menu">实时数据</span></a></li>
+                        <li> <a class="waves-effect waves-dark" href="icon-material.html" aria-expanded="false"><i class="mdi mdi-emoticon"></i><span class="hide-menu">历史数据</span></a></li>
+                        
+                        <li> <a class="waves-effect waves-dark" href="pages-blank.html" aria-expanded="false"><i class="mdi mdi-book-open-variant"></i><span class="hide-menu">其他</span></a></li>
+                        
+                    </ul>
+                    
+                </nav>
+                <!-- End Sidebar navigation -->
+            </div>
+            <!-- End Sidebar scroll-->
+        </aside>
+		
+		<!--公共资源-->
+		
+        <!-- ============================================================== -->
+        <!-- End Left Sidebar - style you can find in sidebar.scss  -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- Page wrapper  -->
+        <!-- ============================================================== -->
+        <div class="page-wrapper">
+            <!-- ============================================================== -->
+            <!-- Container fluid  -->
+            <!-- ============================================================== -->
+            <div class="container-fluid">
+                <!-- ============================================================== -->
+                <!-- Bread crumb and right sidebar toggle -->
+                <!-- ============================================================== -->
+                <div class="row page-titles">
+                    <div class="col-md-5 align-self-center">
+                        <h3 class="text-themecolor">个人信息</h3>
+                    </div>
+                    <div class="col-md-7 align-self-center">
+                        <a href="#" class="btn waves-effect waves-light btn-danger pull-right hidden-sm-down">修改信息</a>
+                    </div>
+                </div>
+                <!-- ============================================================== -->
+                <!-- End Bread crumb and right sidebar toggle -->
+                <!-- ============================================================== -->
+                <!-- ============================================================== -->
+                <!-- Start Page Content -->
+                <!-- ============================================================== -->
+                <!-- Row -->
+                <div class="row">
+                    <!-- Column -->
+                    <div class="col-lg-4 col-xlg-3 col-md-5">
+                        <div class="card">
+                            <div class="card-body">
+                                <center class="m-t-30"> 
+								<!-- <img src="../assets/images/users/1.jpg" alt="homepage" class="dark-logo" /> -->
+
+								<img   th:href="@{/asserts/images/users/1.png}"  src="../assets/images/users/1.jpg" class="img-circle" width="150" />
+                                    <h4 class="card-title m-t-10">admin</h4>
+                                    <h6 class="card-subtitle"></h6>
+                                    <div class="row text-center justify-content-md-center">
+                                        <div class="col-4"><a href="javascript:void(0)" class="link"><i class="icon-people"></i> <font class="font-medium"></font></a></div>
+                                        <div class="col-4"><a href="javascript:void(0)" class="link"><i class="icon-picture"></i> <font class="font-medium"></font></a></div>
+                                    </div>
+                                </center>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Column -->
+                    <!-- Column -->
+                    <div class="col-lg-8 col-xlg-9 col-md-7">
+                        <div class="card">
+                            <div class="card-body">
+                                <form class="form-horizontal form-material">
+                                    <div class="form-group">
+                                        <label class="col-md-12">姓名</label>
+                                        <div class="col-md-12">
+                                            <input type="text" placeholder="admin" class="form-control form-control-line">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="example-email" class="col-md-12">邮箱</label>
+                                        <div class="col-md-12">
+                                            <input type="email" placeholder="123@admin.com" class="form-control form-control-line" name="example-email" id="example-email">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-md-12">密码</label>
+                                        <div class="col-md-12">
+                                            <input type="password" value="password" class="form-control form-control-line">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-md-12">电话号码</label>
+                                        <div class="col-md-12">
+                                            <input type="text" placeholder="123 456 7890" class="form-control form-control-line">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-md-12">地址信息</label>
+                                        <div class="col-md-12">
+                                            <textarea rows="5" class="form-control form-control-line"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <!-- <label class="col-sm-12">Select Country</label>
+                                        <div class="col-sm-12">
+                                            <select class="form-control form-control-line">
+                                                <option>北京</option>
+                                                <option>India</option>
+                                                <option>Usa</option>
+                                                <option>Canada</option>
+                                                <option>Thailand</option>
+                                            </select>
+                                        </div> -->
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="col-sm-12">
+                                            <button class="btn btn-success">修改</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Column -->
+                </div>
+                <!-- Row -->
+                <!-- ============================================================== -->
+                <!-- End PAge Content -->
+                <!-- ============================================================== -->
+            </div>
+            <!-- ============================================================== -->
+            <!-- End Container fluid  -->
+            <!-- ============================================================== -->
+            <!-- ============================================================== -->
+            <!-- footer -->
+            <!-- ============================================================== -->
+            <footer class="footer">Copyright &copy; 2019.Company name All rights reserved.<a target="_blank" href="http://sc.chinaz.com/moban/">&#x7F51;&#x9875;&#x6A21;&#x677F;</a></footer>
+            <!-- ============================================================== -->
+            <!-- End footer -->
+            <!-- ============================================================== -->
+        </div>
+        <!-- ============================================================== -->
+        <!-- End Page wrapper  -->
+        <!-- ============================================================== -->
+    </div>
+    <!-- ============================================================== -->
+    <!-- End Wrapper -->
+    <!-- ============================================================== -->
+    <!-- ============================================================== -->
+    <!-- All Jquery -->
+    <!-- ============================================================== -->
+    th:href="@{/asserts/images/users/1.png}"
+    <script th:href="@{/asserts/plugins/jquery/jquery.min.js}" src="../assets/plugins/jquery/jquery.min.js"></script>
+    <!-- Bootstrap tether Core JavaScript -->
+    <script  th:href="@{/asserts/plugins/jquery/popper.min.js}" src="../assets/plugins/bootstrap/js/popper.min.js"></script>
+    <script th:href="@{/asserts/plugins/jquery/bootstrap.min.js}"  src="../assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <!-- slimscrollbar scrollbar JavaScript -->
+    <script  th:href="@{/asserts/js/perfect-scrollbar.jquery.min.js}" src="js/perfect-scrollbar.jquery.min.js"></script>
+    <!--Wave Effects -->
+    <script th:href="@{/asserts/js/waves.js}" src="js/waves.js"></script>
+    <!--Menu sidebar -->
+    <script th:href="@{/asserts/js/sidebarmenu.js}" src="js/sidebarmenu.js"></script>
+    <!--Custom JavaScript -->
+    <script th:href="@{/asserts/js/custom.min.js}"  src="js/custom.min.js"></script>
+</body>
+
+</html>

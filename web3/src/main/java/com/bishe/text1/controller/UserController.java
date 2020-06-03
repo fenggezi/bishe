@@ -29,15 +29,15 @@ public class UserController {
 
         if(byUsername==null){
             map.put("msg","用户名或密码错误");
-            return "login";
+            return "logins";
         }
         if(!byUsername.getUsername().equals(username)){
             map.put("msg","用户名或密码错误");
-            return "login";
+            return "logins";
         }
         if(!byUsername.getPassword().equals(password)){
             map.put("msg","用户名或密码错误");
-            return "login";
+            return "logins";
         }
         session.setAttribute("loginUser", username);
         return  "redirect:/main.html";

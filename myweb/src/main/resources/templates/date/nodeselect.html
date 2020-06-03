@@ -65,6 +65,8 @@
                         <th>编号</th>
                         <th>设备状态</th>
                         <th>启用状态</th>
+                        <th>区域</th>
+                        <th>启用状态变更</th>
                         <!--									<th>操作</th>-->
                     </tr>
                     </thead>
@@ -73,6 +75,14 @@
                         <td th:text="${node.id}"></td>
                         <td th:text="${node.status}==0?'正常':'关闭'"></td>
                         <td th:text="${node.use}==0?'启用中':'关闭中'"></td>
+                        <td th:text="${node.addr}"></td>
+                        <td>
+                            <div class="btn-group" role="group" aria-label="...">
+                                <button type="button" class="btn btn-success">启用</button>
+                                <button type="button" class="btn btn-danger">关闭</button>
+                            </div>
+
+                        </td>
                         <!--									<td>-->
                         <!--										<a class="btn btn-sm btn-primary" th:href="@{/emp/}+${emp.id}" >编辑</a>-->
 

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+!-- saved from url=(0052)http://getbootstrap.com/docs/4.0/examples/dashboard/ -->
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<title>Dashboard Template for Bootstrap</title>
+	<!-- Bootstrap core CSS -->
+	<link href="../../static/asserts/css/bootstrap.min.css" th:href="@{webjars/bootstrap/4.4.1-1/css/bootstrap.css}" rel="stylesheet">
+
+	<!-- Custom styles for this template -->
+	<link href="../../static/asserts/css/dashboard.css" th:href="@{/asserts/css/dashboard.css}" rel="stylesheet">
+	<style type="text/css">
+		/* Chart.js */
+
+		@-webkit-keyframes chartjs-render-animation {
+			from {
+				opacity: 0.99
+			}
+			to {
+				opacity: 1
+			}
+		}
+
+		@keyframes chartjs-render-animation {
+			from {
+				opacity: 0.99
+			}
+			to {
+				opacity: 1
+			}
+		}
+
+		.chartjs-render-monitor {
+			-webkit-animation: chartjs-render-animation 0.001s;
+			animation: chartjs-render-animation 0.001s;
+		}
+	</style>
+	<style>
+		element.style {
+		}
+		.mod-content .content-link {
+			color: #054da1;
+			float: left;
+			width: 830px;
+			overflow: hidden;
+		}
+		ol, ul, menu {
+			list-style: none;
+		}
+		legend, menu, ol, ul, td, th, input {
+			padding: 0;
+		}
+		body, h1, h2, h3, h4, h5, h6, p, dl, dd, ol, ul, fieldset, figure, menu, blockquote, pre, hr {
+			margin: 0;
+		}
+		user agent stylesheet
+		ul {
+			display: block;
+			list-style-type: disc;
+			margin-block-start: 1em;
+			margin-block-end: 1em;
+			margin-inline-start: 0px;
+			margin-inline-end: 0px;
+			padding-inline-start: 40px;
+		}
+		.mod-content {
+			border: 1px solid #dfdfe0;
+			font-size: 14px;
+			border-top: 0;
+			padding-bottom: 8px;
+			background: #fff;
+		}
+		html {
+			font: 12px/1.5 arial,SimSun,helvetica,sans-serif;
+		}
+		user agent stylesheet
+		html {
+			color: -internal-root-color;
+		}
+		element.style {
+		}
+		#bd .mod-content:hover, #bd .mod-content.hover {
+			background-color: #f8fafc;
+		}
+		.mod-content {
+			border: 1px solid #dfdfe0;
+			font-size: 14px;
+			border-top: 0;
+			padding-bottom: 8px;
+			background: #fff;
+		}
+		.clearfix {
+			zoom: 1;
+		}
+		user agent stylesheet
+		div {
+			display: block;
+		}
+		html {
+			font: 12px/1.5 arial,SimSun,helvetica,sans-serif;
+		}
+		user agent stylesheet
+		html {
+			color: -internal-root-color;
+		}
+		.clearfix:after {
+			clear: both;
+			content: ".";
+			display: block;
+			height: 0;
+			line-height: 0;
+			visibility: hidden;
+		}
+
+	</style>
+</head>
+
+<body>
+<!-- 分隔 -->
+
+<!--		引入topbar-->
+<div th:replace="commons/bar::#topbar"></div>
+
+
+<div class="container-fluid">
+	<div class="row">
+
+		<!--		引入sidebar-->
+		<div th:replace="commons/bar::#sidebar(activeUri='emps')"></div>
+
+
+		<main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
+
+			<ul class="content-link"><li><h3><div><a href="http://news.sina.com.cn/" title="" target="_blank" class="text-con indext"><img src="./头条__hao123上网导航_files/sina.png" width="16" height="16" class="img1">新浪新闻</a></div></h3></li><li><h3><div><a href="http://news.ifeng.com/" title="" target="_blank" class="text-con indext"><img src="./头条__hao123上网导航_files/fenghuangwang.png" width="16" height="16" class="img1">凤凰资讯</a></div></h3></li><li class=""><h3><div><a href="http://news.qq.com/" title="" target="_blank" class="text-con indext"><img src="./头条__hao123上网导航_files/qq.png" width="16" height="16" class="img1">腾讯新闻</a></div></h3></li><li class=""><h3><div><a href="http://www.people.com.cn/" title="" target="_blank" class="text-con indext"><img src="./头条__hao123上网导航_files/ba47c509a7011e35e4447f9342a5cc6b.png" width="16" height="16" class="img1">人民网</a></div></h3></li><li class=""><h3><div><a href="http://www.stnn.cc/" title="" target="_blank" class="text-con indext"><img src="./头条__hao123上网导航_files/6ad70198a270caa87e76927116a77287.png" width="16" height="16" class="img1">星岛环球网</a></div></h3></li><li><h3><div><a href="http://news.sohu.com/" title="" target="_blank" class="text-con indext"><img src="./头条__hao123上网导航_files/91f21aae80a361857e75636c9c7cf35c.jpg" width="16" height="16" class="img1">搜狐新闻</a></div></h3></li><li><h3><div><a href="http://www.huanqiu.com/" title="" target="_blank" class="text-con indext"><img src="./头条__hao123上网导航_files/hanjuwang.png" width="16" height="16" class="img1">环球网</a></div></h3></li><li class=""><h3><div><a href="http://www.cankaoxiaoxi.com/" title="" target="_blank" class="text-con indext"><img src="./头条__hao123上网导航_files/cankaoxiaoxi.png" width="16" height="16" class="img1">参考消息</a></div></h3></li><li><h3><div><a href="http://www.takungpao.com/" title="" target="_blank" class="text-con indext"><img src="./头条__hao123上网导航_files/51eaf2282e43b37ed81c69b7901609e7.jpg" width="16" height="16" class="img1">大公网</a></div></h3></li><li class=""><h3><div><a href="http://www.thepaper.cn/" title="" target="_blank" class="text-con indext"><img src="./头条__hao123上网导航_files/dc9bd1680fd936085d3443333baecb99.png" width="16" height="16" class="img1">澎湃新闻</a></div></h3></li><li><h3><div><a href="http://www.xinhuanet.com/" title="" target="_blank" class="text-con">新华网</a></div></h3></li><li><h3><div><a href="http://www.chinanews.com/" title="" target="_blank" class="text-con">中国新闻网</a></div></h3></li><li class=""><h3><div><a href="http://www.southcn.com/" title="" target="_blank" class="text-con">南方网</a></div></h3></li><li class=""><h3><div><a href="http://www.wenming.cn/" title="" target="_blank" class="text-con">中国文明网</a></div></h3></li><li class=""><h3><div><a href="http://news.baidu.com/" title="" target="_blank" class="text-con">百度新闻搜索</a></div></h3></li><li class=""><h3><div><a href="http://www.gov.cn/jrzg/" title="" target="_blank" class="text-con">中国政府网</a></div></h3></li><li class=""><h3><div><a href="http://www.81.cn/" title="" target="_blank" class="text-con">中国军网</a></div></h3></li><li class=""><h3><div><a href="http://www.china.com/" title="" target="_blank" class="text-con">中华网</a></div></h3></li><li class=""><h3><div><a href="http://www.cnr.cn/" title="" target="_blank" class="text-con">央广网</a></div></h3></li><li class=""><h3><div><a href="http://www.cri.cn/index.html" title="" target="_blank" class="text-con">国际在线</a></div></h3></li><li class=""><h3><div><a href="http://news.163.com/" title="" target="_blank" class="text-con">网易新闻</a></div></h3></li><li class=""><h3><div><a href="http://news.cntv.cn/" title="" target="_blank" class="text-con">央视网新闻</a></div></h3></li><li class=""><h3><div><a href="http://www.youth.cn/" title="" target="_blank" class="text-con">中国青年网</a></div></h3></li><li><h3><div><a href="http://www.71.cn/" title="" target="_blank" class="text-con">宣讲家</a></div></h3></li><li><h3><div><a href="http://www.qdaily.com/" title="" target="_blank" class="text-con">好奇心日报</a></div></h3></li><li class=""><h3 class="last-row"><div><a href="http://www.k618.cn/" title="" target="_blank" class="text-con">未来网</a></div></h3></li></ul>
+
+
+		</main>
+	</div>
+</div>
+
+<ul class="content-link"><li><h3><div><a href="http://news.sina.com.cn/" title="" target="_blank" class="text-con indext"><img src="./头条__hao123上网导航_files/sina.png" width="16" height="16" class="img1">新浪新闻</a></div></h3></li><li><h3><div><a href="http://news.ifeng.com/" title="" target="_blank" class="text-con indext"><img src="./头条__hao123上网导航_files/fenghuangwang.png" width="16" height="16" class="img1">凤凰资讯</a></div></h3></li><li class=""><h3><div><a href="http://news.qq.com/" title="" target="_blank" class="text-con indext"><img src="./头条__hao123上网导航_files/qq.png" width="16" height="16" class="img1">腾讯新闻</a></div></h3></li><li class=""><h3><div><a href="http://www.people.com.cn/" title="" target="_blank" class="text-con indext"><img src="./头条__hao123上网导航_files/ba47c509a7011e35e4447f9342a5cc6b.png" width="16" height="16" class="img1">人民网</a></div></h3></li><li class=""><h3><div><a href="http://www.stnn.cc/" title="" target="_blank" class="text-con indext"><img src="./头条__hao123上网导航_files/6ad70198a270caa87e76927116a77287.png" width="16" height="16" class="img1">星岛环球网</a></div></h3></li><li><h3><div><a href="http://news.sohu.com/" title="" target="_blank" class="text-con indext"><img src="./头条__hao123上网导航_files/91f21aae80a361857e75636c9c7cf35c.jpg" width="16" height="16" class="img1">搜狐新闻</a></div></h3></li><li><h3><div><a href="http://www.huanqiu.com/" title="" target="_blank" class="text-con indext"><img src="./头条__hao123上网导航_files/hanjuwang.png" width="16" height="16" class="img1">环球网</a></div></h3></li><li class=""><h3><div><a href="http://www.cankaoxiaoxi.com/" title="" target="_blank" class="text-con indext"><img src="./头条__hao123上网导航_files/cankaoxiaoxi.png" width="16" height="16" class="img1">参考消息</a></div></h3></li><li><h3><div><a href="http://www.takungpao.com/" title="" target="_blank" class="text-con indext"><img src="./头条__hao123上网导航_files/51eaf2282e43b37ed81c69b7901609e7.jpg" width="16" height="16" class="img1">大公网</a></div></h3></li><li class=""><h3><div><a href="http://www.thepaper.cn/" title="" target="_blank" class="text-con indext"><img src="./头条__hao123上网导航_files/dc9bd1680fd936085d3443333baecb99.png" width="16" height="16" class="img1">澎湃新闻</a></div></h3></li><li><h3><div><a href="http://www.xinhuanet.com/" title="" target="_blank" class="text-con">新华网</a></div></h3></li><li><h3><div><a href="http://www.chinanews.com/" title="" target="_blank" class="text-con">中国新闻网</a></div></h3></li><li class=""><h3><div><a href="http://www.southcn.com/" title="" target="_blank" class="text-con">南方网</a></div></h3></li><li class=""><h3><div><a href="http://www.wenming.cn/" title="" target="_blank" class="text-con">中国文明网</a></div></h3></li><li class=""><h3><div><a href="http://news.baidu.com/" title="" target="_blank" class="text-con">百度新闻搜索</a></div></h3></li><li class=""><h3><div><a href="http://www.gov.cn/jrzg/" title="" target="_blank" class="text-con">中国政府网</a></div></h3></li><li class=""><h3><div><a href="http://www.81.cn/" title="" target="_blank" class="text-con">中国军网</a></div></h3></li><li class=""><h3><div><a href="http://www.china.com/" title="" target="_blank" class="text-con">中华网</a></div></h3></li><li class=""><h3><div><a href="http://www.cnr.cn/" title="" target="_blank" class="text-con">央广网</a></div></h3></li><li class=""><h3><div><a href="http://www.cri.cn/index.html" title="" target="_blank" class="text-con">国际在线</a></div></h3></li><li class=""><h3><div><a href="http://news.163.com/" title="" target="_blank" class="text-con">网易新闻</a></div></h3></li><li class=""><h3><div><a href="http://news.cntv.cn/" title="" target="_blank" class="text-con">央视网新闻</a></div></h3></li><li class=""><h3><div><a href="http://www.youth.cn/" title="" target="_blank" class="text-con">中国青年网</a></div></h3></li><li><h3><div><a href="http://www.71.cn/" title="" target="_blank" class="text-con">宣讲家</a></div></h3></li><li><h3><div><a href="http://www.qdaily.com/" title="" target="_blank" class="text-con">好奇心日报</a></div></h3></li><li class=""><h3 class="last-row"><div><a href="http://www.k618.cn/" title="" target="_blank" class="text-con">未来网</a></div></h3></li></ul>
+
+<div class="mod-content clearfix"><div class="content-con content-con-first"><h2 class="content-title">新闻名站<span class="content-title-des">(26)</span></h2><ul class="content-link"><li><h3><div><a href="http://news.sina.com.cn/" title="" target="_blank" class="text-con indext"><img src="./头条__hao123上网导航_files/sina.png" width="16" height="16" class="img1">新浪新闻</a></div></h3></li><li><h3><div><a href="http://news.ifeng.com/" title="" target="_blank" class="text-con indext"><img src="./头条__hao123上网导航_files/fenghuangwang.png" width="16" height="16" class="img1">凤凰资讯</a></div></h3></li><li class=""><h3><div><a href="http://news.qq.com/" title="" target="_blank" class="text-con indext"><img src="./头条__hao123上网导航_files/qq.png" width="16" height="16" class="img1">腾讯新闻</a></div></h3></li><li class=""><h3><div><a href="http://www.people.com.cn/" title="" target="_blank" class="text-con indext"><img src="./头条__hao123上网导航_files/ba47c509a7011e35e4447f9342a5cc6b.png" width="16" height="16" class="img1">人民网</a></div></h3></li><li class=""><h3><div><a href="http://www.stnn.cc/" title="" target="_blank" class="text-con indext"><img src="./头条__hao123上网导航_files/6ad70198a270caa87e76927116a77287.png" width="16" height="16" class="img1">星岛环球网</a></div></h3></li><li><h3><div><a href="http://news.sohu.com/" title="" target="_blank" class="text-con indext"><img src="./头条__hao123上网导航_files/91f21aae80a361857e75636c9c7cf35c.jpg" width="16" height="16" class="img1">搜狐新闻</a></div></h3></li><li><h3><div><a href="http://www.huanqiu.com/" title="" target="_blank" class="text-con indext"><img src="./头条__hao123上网导航_files/hanjuwang.png" width="16" height="16" class="img1">环球网</a></div></h3></li><li class=""><h3><div><a href="http://www.cankaoxiaoxi.com/" title="" target="_blank" class="text-con indext"><img src="./头条__hao123上网导航_files/cankaoxiaoxi.png" width="16" height="16" class="img1">参考消息</a></div></h3></li><li><h3><div><a href="http://www.takungpao.com/" title="" target="_blank" class="text-con indext"><img src="./头条__hao123上网导航_files/51eaf2282e43b37ed81c69b7901609e7.jpg" width="16" height="16" class="img1">大公网</a></div></h3></li><li class=""><h3><div><a href="http://www.thepaper.cn/" title="" target="_blank" class="text-con indext"><img src="./头条__hao123上网导航_files/dc9bd1680fd936085d3443333baecb99.png" width="16" height="16" class="img1">澎湃新闻</a></div></h3></li><li><h3><div><a href="http://www.xinhuanet.com/" title="" target="_blank" class="text-con">新华网</a></div></h3></li><li><h3><div><a href="http://www.chinanews.com/" title="" target="_blank" class="text-con">中国新闻网</a></div></h3></li><li class=""><h3><div><a href="http://www.southcn.com/" title="" target="_blank" class="text-con">南方网</a></div></h3></li><li class=""><h3><div><a href="http://www.wenming.cn/" title="" target="_blank" class="text-con">中国文明网</a></div></h3></li><li class=""><h3><div><a href="http://news.baidu.com/" title="" target="_blank" class="text-con">百度新闻搜索</a></div></h3></li><li class=""><h3><div><a href="http://www.gov.cn/jrzg/" title="" target="_blank" class="text-con">中国政府网</a></div></h3></li><li class=""><h3><div><a href="http://www.81.cn/" title="" target="_blank" class="text-con">中国军网</a></div></h3></li><li class=""><h3><div><a href="http://www.china.com/" title="" target="_blank" class="text-con">中华网</a></div></h3></li><li class=""><h3><div><a href="http://www.cnr.cn/" title="" target="_blank" class="text-con">央广网</a></div></h3></li><li class=""><h3><div><a href="http://www.cri.cn/index.html" title="" target="_blank" class="text-con">国际在线</a></div></h3></li><li class=""><h3><div><a href="http://news.163.com/" title="" target="_blank" class="text-con">网易新闻</a></div></h3></li><li class=""><h3><div><a href="http://news.cntv.cn/" title="" target="_blank" class="text-con">央视网新闻</a></div></h3></li><li class=""><h3><div><a href="http://www.youth.cn/" title="" target="_blank" class="text-con">中国青年网</a></div></h3></li><li><h3><div><a href="http://www.71.cn/" title="" target="_blank" class="text-con">宣讲家</a></div></h3></li><li><h3><div><a href="http://www.qdaily.com/" title="" target="_blank" class="text-con">好奇心日报</a></div></h3></li><li class=""><h3 class="last-row"><div><a href="http://www.k618.cn/" title="" target="_blank" class="text-con">未来网</a></div></h3></li></ul></div></div>
+
+</body>
+</html>

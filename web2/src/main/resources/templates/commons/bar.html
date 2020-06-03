@@ -36,7 +36,7 @@
         <!-- //image logo -->
 
         <div class="logo-icon text-center">
-            <a href="pricing.html" title="logo"><img src="assets/images/logo.png" alt="logo-icon"> </a>
+            <a href="pricing.html" title="logo"><img th:src="@{/assets/images/logo.png}" alt="logo-icon"> </a>
         </div>
         <!-- //logo end -->
 
@@ -55,9 +55,13 @@
                        <span><i class="lnr lnr-chevron-right"></i></span></a>
                        <li><a href="carousels.html">继电器状态</a> </li>
                    </li> -->
-                <li class="active"><a th:href="@{/sensor/real}"><i class="fa fa-table"></i> <span>实时数据</span></a></li>
+                <li ><a th:href="@{/sensor/real}"><i class="fa fa-table"></i> <span>实时数据</span></a></li>
                 <!--   <li><a href="blocks.html"><i class="fa fa-th"></i> <span>Content blocks</span></a></li>
                    <li><a href="forms.html"><i class="fa fa-file-text"></i> <span>Forms</span></a></li> -->
+                <li ><a th:href="@{/guzhang}"><i class="fa fa-table"></i> <span>故障上报</span></a></li>
+
+                <li ><a th:href="@{/zixun}"><i class="fa fa-apple"></i> <span>行业资讯</span></a></li>
+
             </ul>
             <!-- //sidebar nav end -->
             <!-- toggle button start -->
@@ -87,7 +91,7 @@
                                aria-expanded="false">
                                 <div class="profile_img">
                                     <img src="@{/asserts/assets2/images/profileimg.jpg" class="rounded-circle" alt="" />
-                                    <img class="mb-4" th:src="@{/asserts/img/bootstrap-solid.svg}" src="asserts/img/bootstrap-solid.svg" alt="" width="72" height="72">
+                                    <img class="mb-4" th:src="@{/asserts/img/touxiang.PNG}" src="asserts/img/bootstrap-solid.svg" alt="" width="72" height="72">
 
 
                                     <div class="user-active">

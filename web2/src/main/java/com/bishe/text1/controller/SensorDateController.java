@@ -85,4 +85,14 @@ public class SensorDateController {
         return "carousels";
     }
 
+    @GetMapping("/guzhang")
+    public String guzhang(){
+        return "guzhang2";
+    }
+
+    @GetMapping("/zixun")
+    public String zixun(){
+        return "zixun2";
+    }
+
 }

@@ -52,16 +52,74 @@ public class TerminalController {
     @GetMapping("/node")
     public String selectNode(Model model){ // 查看终端节点
         List<NodeS> nodeSList = new ArrayList<>();
-        NodeS nodeS = new NodeS(1,0,0);
-        NodeS nodeS2 = new NodeS(2,0,0);
-        NodeS nodeS3 = new NodeS(3,1,1);
-        NodeS nodeS4 = new NodeS(4,1,1);
+        NodeS nodeS = new NodeS(1,0,0,"一号棚节点1");
+        NodeS nodeS2 = new NodeS(2,0,0,"一号棚节点2");
+        NodeS nodeS3 = new NodeS(3,1,1,"一号棚节点3");
+        NodeS nodeS4 = new NodeS(4,1,1,"一号棚节点4");
+        NodeS nodeS5 = new NodeS(3,1,1,"二号棚节点3");
+        NodeS nodeS6 = new NodeS(4,1,1,"二号棚节点4");
         nodeSList.add(nodeS);
         nodeSList.add(nodeS2);
         nodeSList.add(nodeS3);
         nodeSList.add(nodeS4);
+        nodeSList.add(nodeS5);
+        nodeSList.add(nodeS6);
         model.addAttribute("nodeSList",nodeSList);
         return "date/nodeselect";
     }
 
+    @GetMapping("/guzhang")
+    public String guzhang(Model model){ // 查看终端节点
+        List<NodeS> nodeSList = new ArrayList<>();
+        NodeS nodeS = new NodeS(1,0,0,"一号棚节点1");
+        NodeS nodeS2 = new NodeS(2,0,0,"一号棚节点2");
+        NodeS nodeS3 = new NodeS(3,1,1,"一号棚节点3");
+        NodeS nodeS4 = new NodeS(4,1,1,"一号棚节点4");
+        NodeS nodeS5 = new NodeS(3,1,1,"二号棚节点3");
+        NodeS nodeS6 = new NodeS(4,1,1,"二号棚节点4");
+        nodeSList.add(nodeS);
+        nodeSList.add(nodeS2);
+        nodeSList.add(nodeS3);
+        nodeSList.add(nodeS4);
+        nodeSList.add(nodeS5);
+        nodeSList.add(nodeS6);
+        model.addAttribute("nodeSList",nodeSList);
+        return "date/guzhang";
+    }
+    @GetMapping("/ziun")
+    public String ziun(Model model){ // 查看终端节点
+        List<NodeS> nodeSList = new ArrayList<>();
+        NodeS nodeS = new NodeS(1,0,0,"一号棚节点1");
+        NodeS nodeS2 = new NodeS(2,0,0,"一号棚节点2");
+        NodeS nodeS3 = new NodeS(3,1,1,"一号棚节点3");
+        NodeS nodeS4 = new NodeS(4,1,1,"一号棚节点4");
+        NodeS nodeS5 = new NodeS(3,1,1,"二号棚节点3");
+        NodeS nodeS6 = new NodeS(4,1,1,"二号棚节点4");
+        nodeSList.add(nodeS);
+        nodeSList.add(nodeS2);
+        nodeSList.add(nodeS3);
+        nodeSList.add(nodeS4);
+        nodeSList.add(nodeS5);
+        nodeSList.add(nodeS6);
+        model.addAttribute("nodeSList",nodeSList);
+        return "date/zixun";
+    }
+    @GetMapping("/hangyenew")
+    public String newshangye(Model model){ // 查看终端节点
+        List<NodeS> nodeSList = new ArrayList<>();
+        NodeS nodeS = new NodeS(1,0,0,"一号棚节点1");
+        NodeS nodeS2 = new NodeS(2,0,0,"一号棚节点2");
+        NodeS nodeS3 = new NodeS(3,1,1,"一号棚节点3");
+        NodeS nodeS4 = new NodeS(4,1,1,"一号棚节点4");
+        NodeS nodeS5 = new NodeS(3,1,1,"二号棚节点3");
+        NodeS nodeS6 = new NodeS(4,1,1,"二号棚节点4");
+        nodeSList.add(nodeS);
+        nodeSList.add(nodeS2);
+        nodeSList.add(nodeS3);
+        nodeSList.add(nodeS4);
+        nodeSList.add(nodeS5);
+        nodeSList.add(nodeS6);
+        model.addAttribute("nodeSList",nodeSList);
+        return "date/hangyenew";
+    }
 }
