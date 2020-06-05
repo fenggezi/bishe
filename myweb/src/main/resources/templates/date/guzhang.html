@@ -54,25 +54,22 @@
 
         <!--		引入sidebar-->
         <div th:replace="commons/bar::#sidebar(activeUri='emps')"></div>
-
-
+                {{}}
         <main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
-            <form>
+            <form th:action="@{/guzhangshangchuan}">
                <div align="center"><h2 align="">  故障申报</h2></div>
                 <div class="form-group">
                     <label for="exampleInputEmail1">故障地址</label>
-                    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="text">
+                    <input type="text" name = "address" class="form-control" id="exampleInputEmail1" placeholder="text">
                 </div>
                 <div class="form-group">
                     <label for="exampleInputEmail1">故障节点</label>
-                    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="text">
+                    <input type="text" name="node" class="form-control" id="exampleInputEmail1" placeholder="text">
                 </div>
                 <div class="form-group">
                     <label for="exampleInputEmail1">故障类型</label>
-                    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="text">
+                    <input type="text" name ="type" class="form-control" id="exampleInputEmail1" placeholder="text">
                 </div>
-
-
                 <div align="center"><button type="submit" class="btn btn-default">故障提交</button></div>
             </form>
         </main>
