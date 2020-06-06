@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import javax.servlet.http.HttpSession;
+import java.util.HashMap;
 import java.util.Map;
 
 @Controller
@@ -69,6 +70,20 @@ public class UserController {
     @GetMapping("/register")
     public String selectuserALl(Model model){
         return  "register";
+    }
+
+    @GetMapping("/own") // 修改个人信息
+    public String  updateUser(Model model){
+        return "updateown";
+    }
+
+
+    @GetMapping("/own2") // 修改个人信息
+    public String  updateUser2(Model model ,Users user){
+
+        //
+        model.addAttribute("msgs","success");
+        return "updateown";
     }
 
 }

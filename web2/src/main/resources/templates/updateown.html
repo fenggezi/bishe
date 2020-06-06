@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Pricing</title>
+
+    <!-- Template CSS -->
+    <link rel="stylesheet" th:href="@{/asserts/assets2/css/style-starter.css}" >
+
+    <!-- google fonts -->
+    <link href="http://fonts.googleapis.com/css?family=Nunito:300,400,600,700,800,900&display=swap" rel="stylesheet">
+</head>
+<body>
+<div th:replace="commons/bar::#topbar"></div>
+<!--  公共资源-->
+
+<!-- main content start -->
+<div class="main-content">
+
+    <!-- content -->
+    <div class="container-fluid content-top-gap">
+
+        <!-- breadcrumbs -->
+        <nav aria-label="breadcrumb" class="mb-4">
+            <ol class="breadcrumb my-breadcrumb">
+                <li class="breadcrumb-item"><a href="index.html">首页</a></li>
+                <li class="breadcrumb-item active" aria-current="page">信息修改</li>
+            </ol>
+        </nav>
+        <!-- //breadcrumbs -->
+        <div th:text="${msgs}"></div>
+        <br>
+
+        信息修改表单
+        <form th:action="@{/own2}">
+           姓名： <input  name="username" >
+           密码： <input  name="password">
+           邮箱： <input  name="email">
+           性别 <input  name="gender">
+           年龄： <input  name = "age">
+
+            <button type="submit">信息修改</button>
+        </form>
+
+
+
+
+
+        <!--footer section start-->
+        <footer class="dashboard">
+            <p>多肉栽培系统</p>
+        </footer>
+        <!--footer section end-->
+        <!-- move top -->
+        <button onclick="topFunction()" id="movetop" class="bg-primary" title="Go to top">
+            <span class="fa fa-angle-up"></span>
+        </button>
+
+</body>
+
+</html>
