@@ -1,0 +1,323 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Pricing</title>
+
+    <!-- Template CSS -->
+    <link rel="stylesheet" th:href="@{/asserts/assets2/css/style-starter.css}" >
+    <link rel="stylesheet" th:href="@{/asserts/css/app.css}" >
+
+    <!-- google fonts -->
+    <link href="http://fonts.googleapis.com/css?family=Nunito:300,400,600,700,800,900&display=swap" rel="stylesheet">
+</head>
+<body>
+<div th:replace="commons/bar::#topbar"></div>
+<!--  公共资源-->
+
+<!-- main content start -->
+<div class="main-content">
+
+    <!-- content -->
+    <div class="container-fluid content-top-gap">
+
+        <!-- breadcrumbs -->
+        <nav aria-label="breadcrumb" class="mb-4">
+            <ol class="breadcrumb my-breadcrumb">
+                <li class="breadcrumb-item"><a href="index.html">首页</a></li>
+                <li class="breadcrumb-item active" aria-current="page">大棚管理</li>
+            </ol>
+        </nav>
+        <!-- //breadcrumbs -->
+
+        <!-- pricing -->
+        <section class="pricing">
+            <div class="card card_border mb-5">
+                <div class="cards__heading">
+                    <h3><span> 大棚管理</span></h3>
+                </div>
+                <div class="card-body">
+
+                    <!--                    在数据模块的位置的地方显示上传故障节点报错的数据-->
+                    <!-- Page Content -->
+                    <div class="container-fluid p-y-md">
+                        <div class="row">
+                            <div class="col-sm-5 col-lg-3">
+
+                                <!-- .card -->
+                                <!-- End Account -->
+                            </div>
+                            <!-- End Collapsible Inbox Navigation -->
+                        </div>
+                        <!-- .col-sm-5 -->
+
+                        <div class="col-sm-7 col-lg-9">
+                            <!-- Message List -->
+                            <div class="card">
+                                <div class="card-header">
+                                    <div class="h4">大棚节点</div>
+                                    <ul class="card-actions">
+                                        <li>
+                                            <button class="js-tooltip" title="Previous 15 Messages" type="button" data-toggle="card-action"><i class="ion-ios-arrow-left"></i></button>
+                                        </li>
+                                        <li>
+                                            <button class="js-tooltip" title="Next 15 Messages" type="button" data-toggle="card-action"><i class="ion-ios-arrow-right"></i></button>
+                                        </li>
+                                        <li>
+                                            <button type="button" data-toggle="card-action" data-action="refresh_toggle" data-action-mode="demo"><i class="ion-refresh"></i></button>
+                                        </li>
+                                        <li>
+                                            <button type="button" data-toggle="card-action" data-action="fullscreen_toggle"></button>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="card-block">
+
+
+                                    <!-- Messages & Checkable Table (.js-table-checkable class is initialized in App() -> uiHelperTableToolsCheckable()) -->
+                                    <div class="pull-r-l">
+                                        <table class="js-table-checkable table table-hover table-vcenter m-b-0">
+                                            <tbody>
+                                            <tr>
+                                                <td class="text-center">
+                                                    <label class="css-input css-checkbox css-checkbox-default">
+                                                        <input type="checkbox"><span></span>
+                                                    </label>
+                                                </td>
+                                                <td class="hidden-xs font-500">一号大棚</td>
+                                                <td>
+                                                    <a class="font-500" data-toggle="modal" data-target="#modal-message" href="#">大棚节点个数  5 </a>
+                                                    <div class="text-muted">平均温度 32摄氏度  平均湿度  45% 平均光照强度  1298ppm </div>
+                                                </td>
+                                                <td class="visible-lg text-muted"></td>
+                                                <td class="visible-lg text-muted">
+
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-center w-10">
+                                                    <label class="css-input css-checkbox css-checkbox-default">
+                                                        <input type="checkbox"><span></span>
+                                                    </label>
+                                                </td>
+                                                <td class="hidden-xs font-500 w-20">二号大棚 </td>
+                                                <td>
+                                                    <a class="font-500" data-toggle="modal" data-target="#modal-message" href="#">大棚节点个数  5 </a>
+                                                    <div class="text-muted">平均温度 32摄氏度  平均湿度  45% 平均光照强度  1298ppm </div>
+                                                </td>
+                                                <td class="visible-lg text-muted"></td>
+                                                <td class="visible-lg text-muted">
+
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-center">
+                                                    <label class="css-input css-checkbox css-checkbox-default">
+                                                        <input type="checkbox"><span></span>
+                                                    </label>
+                                                </td>
+                                                <td class="hidden-xs font-500">三号大棚 Cox</td>
+                                                <td>
+                                                    <a class="font-500" data-toggle="modal" data-target="#modal-message" href="#">大棚节点个数  5 </a>
+                                                    <div class="text-muted">平均温度 32摄氏度  平均湿度  45% 平均光照强度  1298ppm </div>
+                                                </td>
+                                                <td class="visible-lg text-muted"></td>
+                                                <td class="visible-lg text-muted">
+
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-center">
+                                                    <label class="css-input css-checkbox css-checkbox-default">
+                                                        <input type="checkbox"><span></span>
+                                                    </label>
+                                                </td>
+                                                <td class="hidden-xs font-500">四号大棚 </td>
+                                                <td>
+                                                    <a class="font-500" data-toggle="modal" data-target="#modal-message" href="#">大棚节点个数  5 </a>
+                                                    <div class="text-muted">平均温度 32摄氏度  平均湿度  45% 平均光照强度  1298ppm </div>
+                                                </td>
+                                                <td class="visible-lg text-muted"></td>
+                                                <td class="visible-lg text-muted">
+
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-center">
+                                                    <label class="css-input css-checkbox css-checkbox-default">
+                                                        <input type="checkbox"><span></span>
+                                                    </label>
+                                                </td>
+                                                <td class="hidden-xs font-500">五号大棚 </td>
+                                                <td>
+                                                    <a class="font-500" data-toggle="modal" data-target="#modal-message" href="#">大棚节点个数  5 </a>
+                                                    <div class="text-muted">平均温度 32摄氏度  平均湿度  45% 平均光照强度  1298ppm </div>
+                                                </td>
+                                                <td class="visible-lg text-muted"></td>
+                                                <td class="visible-lg text-muted">
+
+                                            </tr>
+                                            <tr>
+                                                <td class="text-center">
+                                                    <label class="css-input css-checkbox css-checkbox-default">
+                                                        <input type="checkbox"><span></span>
+                                                    </label>
+                                                </td>
+                                                <td class="hidden-xs font-500">六号大棚 </td>
+                                                <td>
+                                                    <a class="font-500" data-toggle="modal" data-target="#modal-message" href="#">大棚节点个数  5 </a>
+                                                    <div class="text-muted">平均温度 32摄氏度  平均湿度  45% 平均光照强度  1298ppm </div>
+                                                </td>
+                                                <td class="visible-lg text-muted"></td>
+                                                <td class="visible-lg text-muted">
+
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-center">
+                                                    <label class="css-input css-checkbox css-checkbox-default">
+                                                        <input type="checkbox"><span></span>
+                                                    </label>
+                                                </td>
+                                                <td class="hidden-xs font-500">七号大棚 </td>
+                                                <td>
+                                                    <a class="font-500" data-toggle="modal" data-target="#modal-message" href="#">大棚节点个数  5 </a>
+                                                    <div class="text-muted">平均温度 32摄氏度  平均湿度  45% 平均光照强度  1298ppm </div>
+                                                </td>
+                                                <td class="visible-lg text-muted"></td>
+                                                <td class="visible-lg text-muted">
+                                                </td>近三十分钟</em>
+                                                </td>
+                                            </tr>
+
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <!-- End Messages -->
+                                </div>
+                                <!-- .card-block -->
+                            </div>
+                            <!-- .card -->
+                            <!-- End Message List -->
+                        </div>
+                        <!-- .col-sm-7 -->
+                    </div>
+                    <!-- .row -->
+                    </div>
+
+
+
+
+
+
+                </div>
+                <!-- //content -->
+
+            </div>
+            <!-- main content end-->
+        </section>
+        <!--footer section start-->
+        <footer class="dashboard">
+            <p>多肉栽培系统</p>
+        </footer>
+        <!--footer section end-->
+        <!-- move top -->
+        <button onclick="topFunction()" id="movetop" class="bg-primary" title="Go to top">
+            <span class="fa fa-angle-up"></span>
+        </button>
+        <script>
+            // When the user scrolls down 20px from the top of the document, show the button
+            window.onscroll = function () {
+                scrollFunction()
+            };
+
+            function scrollFunction() {
+                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                    document.getElementById("movetop").style.display = "block";
+                } else {
+                    document.getElementById("movetop").style.display = "none";
+                }
+            }
+
+            // When the user clicks on the button, scroll to the top of the document
+            function topFunction() {
+                document.body.scrollTop = 0;
+                document.documentElement.scrollTop = 0;
+            }
+        </script>
+        <!-- /move top -->
+
+
+        <script src="/asserts/assets2/js/jquery-3.3.1.min.js"></script>
+        <script src="/asserts/assets2/js/jquery-1.10.2.min.js"></script>
+
+        <!-- chart js -->
+        <script src="/asserts/assets2/js/Chart.min.js"></script>
+        <script src="/asserts/assets2/js/utils.js"></script>
+        <!-- //chart js -->
+
+        <!-- Different scripts of charts.  Ex.Barchart, Linechart -->
+        <script src="/asserts/assets2/js/bar.js"></script>
+        <script src="/asserts/js/linechart.js"></script>
+        <!-- //Different scripts of charts.  Ex.Barchart, Linechart -->
+
+
+        <script src="/asserts/assets2/js/jquery.nicescroll.js"></script>
+        <script src="/asserts/assets2/js/scripts.js"></script>
+
+        <!-- close script -->
+        <script>
+            var closebtns = document.getElementsByClassName("close-grid");
+            var i;
+
+            for (i = 0; i < closebtns.length; i++) {
+                closebtns[i].addEventListener("click", function () {
+                    this.parentElement.style.display = 'none';
+                });
+            }
+        </script>
+        <!-- //close script -->
+
+        <!-- disable body scroll when navbar is in active -->
+        <script>
+            $(function () {
+                $('.sidebar-menu-collapsed').click(function () {
+                    $('body').toggleClass('noscroll');
+                })
+            });
+        </script>
+        <!-- disable body scroll when navbar is in active -->
+
+        <!-- loading-gif Js -->
+        <script src="/asserts/assets2/js/modernizr.js"></script>
+        <script>
+            $(window).load(function () {
+                // Animate loader off screen
+                $(".se-pre-con").fadeOut("slow");;
+            });
+        </script>
+        <!--// loading-gif Js -->
+
+        <!-- Bootstrap Core JavaScript -->
+        <script src="/asserts/assets2/js/bootstrap.min.js"></script>
+        <script src="/asserts/js/realdate.js"></script>
+
+        <script src="http://cdn.static.runoob.com/libs/angular.js/1.4.6/angular.min.js"></script>
+        <!-- chart js -->
+        <script src="/asserts/js/vue.js"></script>
+        <script src="/asserts/js/axios.js"></script>
+
+        <script src="/asserts/js/Chart.min.js"></script>
+        <script src="/asserts/js/utils.js"></script>
+        <!-- //chart js -->
+        <!-- Different scripts of charts.  Ex.Barchart, Linechart -->
+        <script src="/asserts/js/bar.js"></script>
+        <script src="/asserts/js/realdate.js"></script>
+
+</body>
+
+</html>
