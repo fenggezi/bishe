@@ -23,7 +23,6 @@ window.onload = function(){
 						series4[i] = res.data.datas[i].carbon;
 						xTime [i] = res.data.datas[i].timesx;
 					}
-
 					})
 					.catch(function(error) {
 						console.log(error);
