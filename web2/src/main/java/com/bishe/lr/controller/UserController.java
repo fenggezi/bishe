@@ -19,7 +19,7 @@ public class UserController {
     @Autowired
     UsersService usersService;
 
-    @PostMapping("/users/login")
+    @PostMapping("/user/login")
     public String login(@RequestParam("username") String username,
                         @RequestParam("password") String password,
                         Map<String,Object> map,
@@ -39,15 +39,14 @@ public class UserController {
             return "login";
         }
         session.setAttribute("loginUser", username);
-        return  "redirect:/date/my.html";
+        return  "redirect:/my.html";
     }
 
-    @PostMapping("/user/login")
+//    @PostMapping("/user/login")
     public String login2(@RequestParam("username") String username,
                         @RequestParam("password") String password,
                         Map<String,Object> map,
                         HttpSession session) {
-
         session.setAttribute("loginUser", "allens");
         return  "redirect:/my.html";
     }
@@ -59,6 +58,7 @@ public class UserController {
                          Map<String,Object> map){
 
         int register = usersService.register(regname, regpass);
+//        int register =2;
         if(register>0){
             map.put("msg","注册成功");
             return "login";
