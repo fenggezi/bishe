@@ -36,7 +36,13 @@ public class SensorDateController {
         List<Sensor> sensorslist = new ArrayList<>();
 //        Sensor sensor = sensorService.realTimeDate(); // 每秒ajax 查询的数据值
         SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-        Sensor realSensor = new Sensor(1, 22.0, 35.0, 1200, 1256,  1,df.format(new Date()).toString());
+
+        int a = (int)(Math.random()*4.0)+30; //温度
+        int b = (int)(Math.random()*4.0)+60; //湿度
+        int g = (int)(Math.random()*4.0)+1256; //光照
+        int co = (int)(Math.random()*4.0)+1360; //co2
+
+        Sensor realSensor = new Sensor(1, (double)a, (double)b, g, co,  1,df.format(new Date()).toString());
         sensorslist.add(realSensor);
         result.setDatas(sensorslist);
         return realSensor;
@@ -88,10 +94,14 @@ public class SensorDateController {
                                              @RequestParam("type")String type ,
                                              Model model){
 
+        model.addAttribute("msgss","上报成功");
 
-        return null;
+        return "/date/guzhang";
     }
 
-
+    @GetMapping("/yemianzixun") // zixunyemian
+    public String yemianzixun(){
+        return "/date/zixunyemian";
+    }
 
 }

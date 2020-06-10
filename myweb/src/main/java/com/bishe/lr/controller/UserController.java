@@ -56,8 +56,8 @@ public class UserController {
                          @RequestParam("regpass") String regpass,
                          Map<String,Object> map){
 
-        int register = usersService.register(regname, regpass);
-//        int register = 2;
+//        int register = usersService.register(regname, regpass);
+        int register = 2;
         if(register>0){
             map.put("msg","注册成功");
             return "login";

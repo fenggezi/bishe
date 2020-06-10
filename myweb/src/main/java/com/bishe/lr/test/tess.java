@@ -1,5 +1,6 @@
 package com.bishe.lr.test;
 
+import org.springframework.data.auditing.CurrentDateTimeProvider;
 import sun.misc.Unsafe;
 
 import java.util.*;
@@ -8,13 +9,11 @@ public class tess {
 
     public static void main(String[] args) {
 //      changge("qwerfdsa",3);
-        int [] arr ={1,2,3};
 
 
-        synchronized (tess.class){}
+       int a = (int)(Math.random()*4)+28;
+        System.out.println(a);
 
-        Unsafe unsafe;
-        ziji(arr);
     }
 
 

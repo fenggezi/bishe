@@ -55,7 +55,11 @@
         <!--		引入sidebar-->
         <div th:replace="commons/bar::#sidebar(activeUri='emps')"></div>
                 {{}}
+<br>
         <main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
+            <br>
+            <div th:text="${msgss}" style="color: red"> 1 </div>
+
             <form th:action="@{/guzhangshangchuan}">
                <div align="center"><h2 align="">  故障申报</h2></div>
                 <div class="form-group">
@@ -75,8 +79,5 @@
         </main>
     </div>
 </div>
-
-
-
 </body>
 </html>

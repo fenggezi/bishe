@@ -2,7 +2,7 @@ var series1 =['29','30','30','32','29','29','31','30','32','31','30','31'];
 var series2 =['70','73','72','72','70','68','73','68','70','73','72','72'];
 var series3 = ['1200','1199','1212','1300','1212','1236','1245','1399','1243','1236','1245'];
 var series4 =['1310','1499','1345','1534','1345','1244','1232','1356','1456','1345','1534'];
-// var xTime = ['20201212', '20201213', '20201214', '20201215', '20201216', '20201217', '20201218'];
+// var xTime = [, '20201213', '20201214', '20201215', '20201216', '20201217', '20201218'];
 var xTime = [];
 
 window.onload = function(){
@@ -155,13 +155,13 @@ new Chart(document.getElementById("carbonline"), {
 		datasets: [{
 			label: '光照强度',
 			fill: false,
-			backgroundColor: window.chartColors.purple,
+			backgroundColor: window.chartColors.green,
 			borderColor: window.chartColors.green,
 			data:series3,
 		},{
 			label: '二氧化碳浓度',
 			fill: false,
-			backgroundColor: window.chartColors.purple,
+			backgroundColor: window.chartColors.blue,
 			borderColor: window.chartColors.blue,
 			data:series4,
 		}]

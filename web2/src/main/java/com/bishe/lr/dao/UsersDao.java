@@ -16,7 +16,6 @@ public interface UsersDao {
 
     @Select("select * from t_user where username=#{username} and password=#{password}")//登录查询
     Users login(@Param("username") String username,@Param("password") String password);
-
     @Insert("insert into t_user(username,password,createtime) value (#{password},#{username})") // 插入注册信息
     int register(@Param("username") String username,@Param("password") String password);
 }
